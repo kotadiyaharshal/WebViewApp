@@ -1,4 +1,4 @@
-package com.davidlev.webviewapp
+package com.harshal.webviewapp
 
 import org.junit.Test
 

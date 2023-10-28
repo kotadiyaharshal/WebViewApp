@@ -1,4 +1,4 @@
-package com.davidlev.webviewapp
+package com.harshal.webviewapp
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -137,7 +137,7 @@ class MainActivity : AppCompatActivity() {
             dm.enqueue(request)
             Toast.makeText(applicationContext, "Download started", Toast.LENGTH_LONG).show()
         })
-        binding.webView.loadUrl("https://davidlev.me/")
+        binding.webView.loadUrl("https://store.epicgames.com/en-US/")
     }
 
     override fun onRequestPermissionsResult(
