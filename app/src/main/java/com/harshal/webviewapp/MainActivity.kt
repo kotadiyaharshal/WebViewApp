@@ -137,7 +137,7 @@ class MainActivity : AppCompatActivity() {
             dm.enqueue(request)
             Toast.makeText(applicationContext, "Download started", Toast.LENGTH_LONG).show()
         })
-        binding.webView.loadUrl("https://store.epicgames.com/en-US/")
+        binding.webView.loadUrl("https://www.cybermania.ws/")
     }
 
     override fun onRequestPermissionsResult(
