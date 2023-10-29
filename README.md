@@ -4,7 +4,7 @@ Website to app converter.
 
 ^Features
 1. Inbuilt Downloader.
-2. Lightweighted and Fast.
+2. Lightweight and Fast.
 3. Flexible.
 
 How to use???
