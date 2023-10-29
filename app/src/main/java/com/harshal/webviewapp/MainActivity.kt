@@ -20,10 +20,10 @@ import com.davidlev.webviewapp.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityMainBinding
+    private lateinit var binding: ActivityMainBinding  //clas
 
-    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
-    @SuppressLint("SetJavaScriptEnabled")
+    @RequiresApi(Build.VERSION_CODES.JELLY_BEAN_MR1) //android version
+    @SuppressLint("SetJavaScriptEnabled") // java eneble
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
             builtInZoomControls = true
             displayZoomControls = false
             setSupportMultipleWindows(true)
-            mediaPlaybackRequiresUserGesture = false
+            mediaPlaybackRequiresUserGesture = false  //permission
         }
 
         binding.webView.webChromeClient = object : WebChromeClient() {
@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
                     if (isCameraApproved == PackageManager.PERMISSION_DENIED) {
                         val permissions = arrayOf(Manifest.permission.CAMERA)
                         requestPermissions(permissions, 100)
-                        return
+                        return // permission access camera high version
                     }
                 }
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity() {
                 resultMsg.sendToTarget()
                 newWebView.webViewClient = object : WebViewClient() {
                     override fun shouldOverrideUrlLoading(view: WebView, url: String): Boolean {
-                        binding.webView.loadUrl(url)
+                        binding.webView.loadUrl(url)  // webview client method to load website
                         return true
                     }
                 }
@@ -102,7 +102,7 @@ class MainActivity : AppCompatActivity() {
             ): Boolean {
                 binding.progressBar.visibility = View.VISIBLE
                 Log.d("MainActivity", request.url.toString())
-                return super.shouldOverrideUrlLoading(view, request)
+                return super.shouldOverrideUrlLoading(view, request)   // progressbar visiblity
             }
 
             override fun onPageFinished(view: WebView, url: String) {
@@ -116,7 +116,7 @@ class MainActivity : AppCompatActivity() {
                     applicationContext.checkSelfPermission("android.permission.WRITE_EXTERNAL_STORAGE")
                 if (isApproved == PackageManager.PERMISSION_DENIED) {
                     val permissions = arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE)
-                    requestPermissions(permissions, 100)
+                    requestPermissions(permissions, 100)   //dowload permission
                     return@DownloadListener
                 }
             }
